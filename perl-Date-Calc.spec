@@ -1,7 +1,6 @@
 %define	module	Date-Calc
-%define	version	5.4
-%define	rel	6
-%define	release	%mkrel %{rel}
+%define	version	5.5.1
+%define	release	%mkrel 7
 %define	pdir	Date
 
 Summary: 	Gregorian calendar date calculations
