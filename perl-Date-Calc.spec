@@ -1,23 +1,23 @@
-%define	module	Date-Calc
-%define	version	5.5.1
-%define	release	%mkrel 10
-%define	pdir	Date
+%define	upstream_name	 Date-Calc
+%define	upstream_version 5.6
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary: 	Gregorian calendar date calculations
-Name: 		perl-%{module}
-Version: 	%{version}
-Release:	%{release}
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}/
-Buildroot:	%{_tmppath}/%{name}-%{version}-buildroot
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
+
 # these versioned requires are expressed in Makefile.PL, but not in module
-BuildRequires:	perl(Bit::Vector) >= 6.4
-BuildRequires:	perl(Carp::Clan) >= 5.3
-Requires:	perl-Bit-Vector >= 6.4
-Requires:	perl-Carp-Clan >= 5.3
+BuildRequires:	perl(Bit::Vector) >= 6.400.0
+BuildRequires:	perl(Carp::Clan)  >= 5.3
+BuildRequires:	perl-devel
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
+Requires:	perl(Bit::Vector) >= 6.400.0
+Requires:	perl-Carp-Clan    >= 5.3
 
 %description
 This library provides all sorts of date calculations based on the Gregorian
@@ -26,7 +26,7 @@ with all relevant norms and standards: ISO/R 2015-1971, DIN 1355 and, to
 some extent, ISO 8601 (where applicable).
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod -R u+w examples
 
 %build
@@ -50,4 +50,3 @@ rm -rf %{buildroot}
 %{_mandir}/man3/*
 %{perl_vendorarch}/Date
 %{perl_vendorarch}/auto/Date
-
