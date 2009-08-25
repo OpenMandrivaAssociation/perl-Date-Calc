@@ -1,5 +1,5 @@
 %define	upstream_name	 Date-Calc
-%define	upstream_version 5.6
+%define	upstream_version 5.7
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
