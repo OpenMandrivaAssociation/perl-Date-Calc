@@ -1,5 +1,5 @@
 %define	upstream_name	 Date-Calc
-%define	upstream_version 5.8
+%define upstream_version 6.3
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -27,7 +27,6 @@ some extent, ISO 8601 (where applicable).
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-chmod -R u+w examples
 
 %build
 %{__perl} -pi -e 's,^#!perl,#!/usr/bin/perl,' examples/*.{pl,cgi}
@@ -46,7 +45,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,755)
-%doc README.txt CHANGES.txt CREDITS.txt EXAMPLES.txt examples
+%doc README.txt CHANGES.txt CREDITS.txt
 %{_mandir}/man3/*
-%{perl_vendorarch}/Date
+%{perl_vendorlib}/Date
 %{perl_vendorarch}/auto/Date
