@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
@@ -15,9 +15,8 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Date/%{upstream_name}-%{u
 BuildRequires:	perl(Bit::Vector) >= 6.400.0
 BuildRequires:	perl(Carp::Clan)  >= 5.3
 BuildRequires:	perl-devel
+
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
-Requires:	perl(Bit::Vector) >= 6.400.0
-Requires:	perl-Carp-Clan    >= 5.3
 
 %description
 This library provides all sorts of date calculations based on the Gregorian
@@ -31,10 +30,10 @@ some extent, ISO 8601 (where applicable).
 %build
 %{__perl} -pi -e 's,^#!perl,#!/usr/bin/perl,' examples/*.{pl,cgi}
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%{__make}  CFLAGS="%{optflags}"
+%make  CFLAGS="%{optflags}"
 
 %check
-%{__make} test
+%make test
 
 %install
 rm -rf %{buildroot}
@@ -45,7 +44,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,755)
-%doc README.txt CHANGES.txt CREDITS.txt
+%doc README.txt CHANGES.txt CREDITS.txt META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/Date
 %{perl_vendorarch}/auto/Date
