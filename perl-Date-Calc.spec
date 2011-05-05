@@ -17,6 +17,8 @@ BuildRequires:	perl(Carp::Clan)  >= 5.3
 BuildRequires:	perl-devel
 
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
+BuildArch: noarch
+Obsoletes:	%{name} < %version-%release
 
 %description
 This library provides all sorts of date calculations based on the Gregorian
@@ -47,4 +49,3 @@ rm -rf %{buildroot}
 %doc README.txt CHANGES.txt CREDITS.txt META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/Date
-%{perl_vendorarch}/auto/Date
