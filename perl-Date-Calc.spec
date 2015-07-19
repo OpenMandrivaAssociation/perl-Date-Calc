@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    14
+Release:    15
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
