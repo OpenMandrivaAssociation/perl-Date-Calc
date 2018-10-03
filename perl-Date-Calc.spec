@@ -1,9 +1,9 @@
 %define	upstream_name	 Date-Calc
-%define upstream_version 6.3
+%define upstream_version 6.4
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    15
+Release:    1
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
