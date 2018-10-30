@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    1
+Release:    2
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
@@ -67,23 +67,23 @@ rm -rf %{buildroot}
   + Oden Eriksson <oeriksson@mandriva.com>
     - mass rebuild
 
-* Mon Mar 15 2010 Jérôme Quelin <jquelin@mandriva.org> 6.300.0-2mdv2010.1
+* Mon Mar 15 2010 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 6.300.0-2mdv2010.1
 + Revision: 519978
 - rebuild to use perl.req-from-meta
 
-* Sun Nov 08 2009 Jérôme Quelin <jquelin@mandriva.org> 6.300.0-1mdv2010.1
+* Sun Nov 08 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 6.300.0-1mdv2010.1
 + Revision: 463020
 - update to 6.3
 
-* Mon Sep 14 2009 Jérôme Quelin <jquelin@mandriva.org> 5.800.0-1mdv2010.0
+* Mon Sep 14 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 5.800.0-1mdv2010.0
 + Revision: 439430
 - update to 5.8
 
-* Tue Aug 25 2009 Jérôme Quelin <jquelin@mandriva.org> 5.700.0-1mdv2010.0
+* Tue Aug 25 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 5.700.0-1mdv2010.0
 + Revision: 420896
 - update to 5.7
 
-* Wed Aug 12 2009 Jérôme Quelin <jquelin@mandriva.org> 5.600.0-1mdv2010.0
+* Wed Aug 12 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 5.600.0-1mdv2010.0
 + Revision: 415284
 - update to 5.6
 
@@ -144,7 +144,7 @@ rm -rf %{buildroot}
 * Sun Oct 05 2003 Luca Berra <bluca@vodka.it> 5.3-4mdk
 - removed Carp::Clam (provided in own package)
 
-* Wed Aug 13 2003 Per �yvind Karlsen <peroyvind@linux-mandrake.com> 5.3-3mdk
+* Wed Aug 13 2003 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 5.3-3mdk
 - rebuild for new perl
 - drop Prefix tag
 - don't use PREFIX
