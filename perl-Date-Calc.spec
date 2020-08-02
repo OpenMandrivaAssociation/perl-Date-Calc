@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    3
+Release:    4
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
@@ -33,9 +33,6 @@ some extent, ISO 8601 (where applicable).
 %{__perl} -pi -e 's,^#!perl,#!/usr/bin/perl,' examples/*.{pl,cgi}
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make_build  CFLAGS="%{optflags}"
-
-%check
-%make test
 
 %install
 rm -rf %{buildroot}
