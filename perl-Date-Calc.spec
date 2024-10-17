@@ -8,7 +8,7 @@ Release:    5
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
 
 # these versioned requires are expressed in Makefile.PL, but not in module
