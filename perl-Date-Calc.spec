@@ -12,6 +12,7 @@ Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
 
 # these versioned requires are expressed in Makefile.PL, but not in module
+BuildRequires:	make
 BuildRequires:	perl(Bit::Vector) >= 6.400.0
 BuildRequires:	perl(Carp::Clan)  >= 5.3
 BuildRequires:	perl-devel
