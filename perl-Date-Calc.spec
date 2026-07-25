@@ -2,14 +2,14 @@
 %define upstream_version 6.4
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    5
+Version:    %{upstream_version}
+Release:    6
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Date/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Date-Calc
+Source0:	https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-%{upstream_version}.tar.gz
 
 # these versioned requires are expressed in Makefile.PL, but not in module
 BuildRequires:	make
