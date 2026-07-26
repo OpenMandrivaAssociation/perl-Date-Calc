@@ -1,15 +1,13 @@
 %define	upstream_name	 Date-Calc
-%define upstream_version 6.4
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:    6
+Version:    6.4
+Release:    7
 
 Summary: 	Gregorian calendar date calculations
 License: 	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Date-Calc
-Source0:	https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-%{version}.tar.gz
 
 # these versioned requires are expressed in Makefile.PL, but not in module
 BuildRequires:	make
@@ -28,7 +26,7 @@ with all relevant norms and standards: ISO/R 2015-1971, DIN 1355 and, to
 some extent, ISO 8601 (where applicable).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} -pi -e 's,^#!perl,#!/usr/bin/perl,' examples/*.{pl,cgi}
